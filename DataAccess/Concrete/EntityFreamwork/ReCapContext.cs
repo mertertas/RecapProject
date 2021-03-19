@@ -13,7 +13,7 @@ namespace DataAcces.Concrete.EntitiyFreamwork
       protected  override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=LAPTOP-946ECSMC\SQL;Initial Catalog=RECAPDB;Trusted_Connection=true");
-            Console.WriteLine("OK");
+            Console.WriteLine("Bağlantı Başarılı");
         }
 
         public DbSet<Brand> Brands { get; set; }

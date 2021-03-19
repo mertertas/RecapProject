@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using DataAcces.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -38,6 +39,11 @@ namespace Business.Concrete
            return  _carDal.GetAll();
         }
 
+        public List<CarDetailsDto> GetCarDetails()
+        {
+           return _carDal.GetCarDetails();
+        }
+
         public List<Car> GetCarsByBrandId(int brandId)
         {
             return _carDal.GetAll(p=>p.BrandId== brandId);
@@ -53,6 +59,6 @@ namespace Business.Concrete
             _carDal.Update(car);
         }
 
-        
+       
     }
 }

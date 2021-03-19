@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAcces.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace DataAcces.Concrete.InMemory
 {
@@ -60,6 +61,11 @@ namespace DataAcces.Concrete.InMemory
             throw new NotImplementedException();
         }
 
+        public List<CarDetailsDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Car car)
         {
             Car carUpdate = _cars.SingleOrDefault(p => p.Id == car.Id);
@@ -76,5 +82,7 @@ namespace DataAcces.Concrete.InMemory
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }
