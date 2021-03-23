@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAcces.Concrete.EntitiyFreamwork;
+using DataAccess.Concrete.EntityFreamwork;
 using Entities.Concrete;
 using System;
 
@@ -15,8 +16,14 @@ namespace ConsoleUI
             //BrandGetAll();
             //ColorGetAll();
 
-            GetCarDetailsDto();
+            //GetCarDetailsDto();
 
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+
+            customerManager.Add(new Customer { CompanyName="İme Bilişim"});
+
+            UserManager userManager = new UserManager(new EfUserDal());
+            userManager.Add(new User {FirstName="Mert",LastName="Ertaş",Email="ertas-mert@hotmail.com",Password="19645030" });
             Console.WriteLine("Process Completed!!!");
 
             Console.ReadLine();

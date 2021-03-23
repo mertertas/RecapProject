@@ -2,6 +2,7 @@
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAcces.Abstract;
+using DataAcces.Concrete.EntitiyFreamwork;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -33,12 +34,12 @@ namespace Business.Concrete
             return new SuccesResult(Messages.BrandDeleted);
         }
 
-        public IDataResult<List<Brand>> GetAll()
+        public SuccessDataResult<List<Brand>> GetAll()
         {
           return new SuccessDataResult<List<Brand>>(_brandDal.GetAll());
         }
 
-        public IDataResult<List<Brand>> GetById(int brandId)
+        public SuccessDataResult<List<Brand>> GetById(int brandId)
         {
             return  new SuccessDataResult<List<Brand>>( _brandDal.GetAll(p=>p.Id==brandId));
         }

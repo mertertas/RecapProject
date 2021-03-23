@@ -15,9 +15,11 @@ namespace DataAcces.Concrete.EntitiyFreamwork
             optionsBuilder.UseSqlServer(@"Server=LAPTOP-946ECSMC\SQL;Initial Catalog=RECAPDB;Trusted_Connection=true");
             Console.WriteLine("Bağlantı Başarılı");
         }
-
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
     }
 }

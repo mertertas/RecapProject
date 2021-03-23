@@ -32,12 +32,12 @@ namespace Business.Concrete
             return new SuccesResult(Messages.ColorDeleted);
         }
 
-        public IDataResult<List<Color>> GetAll()
+        public SuccessDataResult<List<Color>> GetAll()
         {
            return new SuccessDataResult<List<Color>>( _colorDal.GetAll());
         }
 
-        public IDataResult<List<Color>> GetById(int colorId)
+        public SuccessDataResult<List<Color>> GetById(int colorId)
         {
             return new SuccessDataResult<List<Color>>( _colorDal.GetAll(p=>p.Id==colorId));
         }
