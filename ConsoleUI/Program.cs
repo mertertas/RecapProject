@@ -15,15 +15,9 @@ namespace ConsoleUI
             //CarGetAll();
             //BrandGetAll();
             //ColorGetAll();
-
             //GetCarDetailsDto();
 
-            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
-
-            customerManager.Add(new Customer { CompanyName="İme Bilişim"});
-
-            UserManager userManager = new UserManager(new EfUserDal());
-            userManager.Add(new User {FirstName="Mert",LastName="Ertaş",Email="ertas-mert@hotmail.com",Password="19645030" });
+         
             Console.WriteLine("Process Completed!!!");
 
             Console.ReadLine();

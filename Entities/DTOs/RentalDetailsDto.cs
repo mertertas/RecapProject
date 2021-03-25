@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Concrete
+namespace Entities.DTOs
 {
-   public class Rental:IEntities
+   public class RentalDetailsDto:IDto
     {
         public int Id { get; set; }
-        public int CarId { get; set; }
-        public int CustomerId { get; set; }
+        public string Description { get; set; }
+        public string  CompanyName { get; set; }
         public DateTime RentDate { get; set; }
         public DateTime ReturnDate { get; set; }
     }
